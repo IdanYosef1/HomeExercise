@@ -1,8 +1,10 @@
-
-html, body {
-	width: 100vw;
-	height: 100vh;
+html,
+body {
+  width: 100vw;
+  height: 100vh;
 }
+
+/* ------------------------------------------------------- main.js and update.js ------------------------------------------------------- */
 
 .main {
   display: grid;
@@ -11,30 +13,34 @@ html, body {
   grid-template-rows: 100px auto 50px;
 }
 
+/* ------------------------------------------------------------- header.js ------------------------------------------------------------- */
+
 header {
   position: relative;
   grid-column-start: 1;
   grid-column-end: 3;
-  background-color:#3F3F3F;
+  background-color: #d5f0ff;
   display: flex;
   flex-wrap: wrap;
 }
 
 .logo {
-  position: absolute;
+  position: relative;
   left: 2.55%;
-  top: 25%;
-  width: 105px;
-  height: 50px;
-  background-image: url('logo.png');
-  background-size: 105px 50px;
+  top: 0%;
+  width: 77.4px;
+  height: 90px;
+  background-image: url("logo.png");
+  background-size: 77.4px 90px;
 }
+
+/* ---------------------------------------------------------- currentDate.js ---------------------------------------------------------- */
 
 .div-date {
   position: absolute;
   right: 1.04%;
   top: 45%;
-  font-family: 'Assistant';
+  font-family: "Assistant";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -42,14 +48,10 @@ header {
   display: flex;
   align-items: flex-end;
   text-align: right;
-  color: white;
+  color: rgb(39, 71, 120);
 }
 
-footer {
-  background: #000000;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
+/* ------------------------------------------------------- update.js and body.js ------------------------------------------------------ */
 
 .body-main,
 .body-update {
@@ -72,10 +74,12 @@ footer {
   flex-direction: column;
 }
 
-.checkboxPersons {
+/* --------------------------------------------------------- checkboxComp.js --------------------------------------------------------- */
+
+.div-checkboxComp {
   height: 480px;
   box-shadow: inset -2px 2px 7px rgba(0, 0, 0, 0.28);
-  overflow-y: scroll;
+  overflow-y: auto;
   direction: rtl;
   width: 500px;
   grid-column-start: 1;
@@ -89,59 +93,12 @@ footer {
   direction: ltr;
 }
 
-.div-checkbox {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-input[type='checkbox'] {
-  margin-top: 5.5px;
-}
-
-.div-edit {
-  display: flex;
-  flex-direction: row;
-}
-
-.edit {
-  margin-top: 4px;
-}
-
-.button-edit {
-  height: 20px;
-  display: flex;
-  flex-direction: row;
-  border: transparent;
-  background-color: transparent;
-}
-
-.imgEdit {
-  position: relative;
-  border-radius: 100%;
-  border: 2px solid #FDC733;
-  filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.35));
-  transform: rotate(100deg);
-  margin-right: 3px;
-  margin-top: 4px;
-  width: 10px;
-  height: 10px;
-}
-
-svg {
-  position: absolute;
-  left: 20%;
-  top: 10%;
-}
-
-.p-footer {
-  text-align:center;
-  color:white;
-}
+/* -------------------------------------------------- instruction.js and compare.js -------------------------------------------------- */
 
 .text,
 .div-compare {
   display: flex;
-  margin:auto;
+  margin: auto;
   flex-direction: column;
   grid-column-start: 2;
   grid-column-end: 3;
@@ -168,36 +125,213 @@ svg {
   font-weight: bold;
 }
 
-.container {
-  height: 200px;
-  position: relative;
-  border: 3px solid green;
-}
+/* ---------------------------------------------------------- compare.js ---------------------------------------------------------- */
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-form {
+.compareEmployees {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  flex-direction: row;
+  align-items: flex-end;
 }
 
-.div-form {
+.div-Vs {
+  width: 30%;
+}
+
+.differenceSalaryUp,
+.differenceSalaryDown {
+  font-size: 18px;
   position: absolute;
-  left: 17.5%;
-  top: 38%;
-  max-width:800px ;
+}
+
+.differenceSalaryUp {
+  font-weight: 700;
+  left: 37.5%;
+}
+
+.differenceSalaryDown {
+  left: 35%;
+}
+
+/* ------------------------------------------------------------ most.js ------------------------------------------------------------ */
+
+.span-whoEarns {
+  font-weight: 700;
+  line-height: 84px;
+}
+
+/* ---------------------------------------------------------- employee.js ---------------------------------------------------------- */
+
+.div-employee {
+  width: 250px;
+}
+
+.internalDiv-salary {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.div-line {
+  border-top: 1px solid white;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 5%;
+  margin-bottom: 0px;
+  bottom: 30%;
+}
+
+.triangleUp,
+.triangleDown {
+  border-style: solid;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  left: 69.5%;
+}
+
+.triangleUp {
+  border-color: transparent transparent #2f80ed transparent;
+  border-width: 0px 8px 15px 8px;
+  top: 18.2%;
+}
+
+.triangleDown {
+  border-color: #f2994a transparent transparent transparent;
+  border-width: 15px 8px 15px 8px;
+  top: 19.4%;
+}
+
+.blue,
+.orange {
+  color: white;
+  font-size: 18px;
+  margin-top: auto;
+  position: relative;
+}
+
+.blue {
+  background-color: #2f80ed;
+}
+
+.orange {
+  background-color: #f2994a;
+}
+
+/* ---------------------------------------------------- employee.js and vsComp.js ---------------------------------------------------- */
+
+.internalDiv-salary {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.empName {
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 500px;
+}
+
+/* ----------------------------------------------- employee.js and salaryDifference.js ----------------------------------------------- */
+
+.div-difference {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100px;
+}
+
+/* ------------------------------------------------------------ vsComp.js ------------------------------------------------------------ */
+
+.internalDiv-Vs {
+  color: black;
+  height: 300px;
+  font-size: 18px;
+  margin-top: auto;
+  position: relative;
+}
+
+.div-Vs-line {
+  border-top: 1px solid black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------------------------------------------------------ salaryDifference.js ------------------------------------------------------ */
+
+.span-difference {
+  font-size: 18px;
+  color: white;
+}
+
+/* ------------------------------------------------------- checkboxPerson.js ------------------------------------------------------- */
+
+.div-checkboxPerson {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.div-edit {
   display: flex;
   flex-direction: row;
 }
 
-.button-main {
+input[type="checkbox"] {
+  margin-top: 5.5px;
+}
+
+/* ----------------------------------------------------------- editComp.js ----------------------------------------------------------- */
+
+.button-edit {
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  border: transparent;
+  background-color: transparent;
+}
+
+.edit {
+  margin-top: 4px;
+}
+
+/* ----------------------------------------------------------- pencil.js ----------------------------------------------------------- */
+
+.imgEdit {
+  position: relative;
+  border-radius: 100%;
+  border: 2px solid #fdc733;
+  filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.35));
+  transform: rotate(100deg);
+  margin-right: 3px;
+  margin-top: 4px;
+  width: 10px;
+  height: 10px;
+}
+
+svg {
+  position: absolute;
+  left: 20%;
+  top: 10%;
+}
+
+/* ------------------------------------------------------------ footer.js ------------------------------------------------------------ */
+
+footer {
+  background-color: black;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.p-footer {
+  text-align: center;
+  color: white;
+}
+
+/* ------------------------------------------------------------ update.js ------------------------------------------------------------ */
+
+.button-back {
   position: absolute;
   left: 15.94%;
   top: 13%;
@@ -211,46 +345,8 @@ form {
   border: transparent;
 }
 
-.button-update {
-  position: absolute;
-  margin-top: 28px;
-  left: -4%;
-  top: 100%;
-  width: 147px;
-  height: 55px;
-  border: transparent;
-  font-weight: 700;
-  font-size: 18px;
-  color: white;
-  background-color: #2F80ED;
-}
-
-.button-update:hover {
-  background: black;
-}
-
-.button-cancel {
-  position: absolute;
-  top: 110.8%;
-  left: 42%;
-  width: 147px;
-  height: 55px;
-  border: transparent;
-  font-weight: 700;
-  font-size: 18px;
-  color: #797979;
-  background:  #F9F9F9;
-}
-
-.message {
-  position: absolute;
-  bottom: 1%;
-  left: 16.6%;
-  width: 147px;
-  height: 55px;
-  border: transparent;
-  font-weight: 700;
-  font-size: 17px;
+.button-back:hover {
+  color: #0000008c;
 }
 
 .employeeName {
@@ -273,6 +369,75 @@ form {
   color: #333333;
 }
 
+.message {
+  position: absolute;
+  bottom: 15%;
+  left: 16.45%;
+  width: 147px;
+  border: transparent;
+  font-weight: 700;
+  font-size: 17px;
+  color: green;
+}
+
+/* ------------------------------------------------------------ updateForm.js ------------------------------------------------------------ */
+
+.div-form {
+  position: absolute;
+  left: 17.5%;
+  top: 38%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.button-update,
+.button-cancel {
+  width: 147px;
+  height: 55px;
+  border: transparent;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+}
+
+.button-update {
+  position: absolute;
+  margin-top: 28px;
+  left: -4%;
+  top: 100%;
+  background-color: #2f80ed;
+}
+
+.button-update:hover {
+  background: black;
+}
+
+.button-cancel {
+  position: absolute;
+  top: 110.8%;
+  left: 42%;
+  background: rgb(155, 155, 155);
+}
+
+.button-cancel:hover {
+  background: black;
+}
+
+/* ------------------------------------------------------------ inputForm.js ------------------------------------------------------------ */
+
+.div-inputs {
+  display: flex;
+  height: 52px;
+  margin-right: 5px;
+}
+
 .div-inputs span {
   left: 16.98%;
   width: 180px;
@@ -286,163 +451,44 @@ form {
 }
 
 .input-details {
-  Width:100%;
-  Height:35px;
+  width: 100%;
+  height: 35px;
   margin-left: 25px;
   margin-top: 4px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: inset -2px 2px 7px rgba(0, 0, 0, 0.28);
   border: transparent;
 }
 
-.triangleUp,
-.triangleDown {
-  border-style: solid;
-  height: 0px;
-  width: 0px;
-  position: absolute;
-  left: 69.5%;
-}
-
-.triangleUp {
-  border-color: transparent transparent #2F80ED transparent;
-  border-width: 0px 8px 15px 8px;
-  top: 18.2%
-}
-
-.triangleDown {
-  border-color: #F2994A transparent transparent transparent;
-  border-width: 15px 8px 15px 8px;
-  top: 19.4%
-}
-
-.div-inputs {
-  display: flex;
-  height: 52px;
-}
-
-.span-whoEarns {
-  font-weight: 700;
-  line-height: 84px;
-}
-
-.div-employee {
-  width: 250px;
-}
-
-.blue,
-.orange {
-  color: white;
-  font-size: 18px;
-  margin-top: auto;
-  position: relative;
-}
-
-.blue {
-  background-color: #2F80ED;
-}
-
-.orange {
-  background-color: #F2994A;
-}
-
-.div-difference {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  height: 100px;
-}
-
-.differenceSalaryUp,
-.differenceSalaryDown {
-  font-size: 18px;
-  position: absolute;
-}
-
-.differenceSalaryUp {
-  font-weight: 700;
-  left: 36.5%;
-}
-
-.differenceSalaryDown {
-  left: 35%;
-}
-
-.empName {
-  text-align: center;
-  font-weight: 700;
-  font-size: 22px; 
-  margin-bottom: 500px;
-}
-
-.div-line {
-  border-top: 1px solid white;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  left: 5%; 
-  margin-bottom: 0px;
-  bottom: 30%;
-}
-
-.div-Vs-line {
-  border-top: 1px solid black;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.span-difference {
-  font-size: 18px; 
-  color: white;
-}
-
-.internalDiv-salary {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.compareEmployees {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-.div-Vs {
-  width: 30%;
-}
-
-.internalDiv-Vs {
-  color: black;
-  height: 300px;
-  font-size: 18px;
-  margin-top: auto;
-  position: relative;
-}
+/* ------------------------------------------------------------ @media ------------------------------------------------------------ */
 
 @media only screen and (max-width: 1220px) {
-  .button-main {
+  .button-back {
     top: 8%;
   }
 
   .employeeName {
     top: 13%;
   }
-  
-  .editDetails {
-    top: 27.5%
-  }
 
-  .message {
-    bottom: -5%;
-    left: 16%;
+  .editDetails {
+    top: 27.5%;
   }
 }
 
 @media only screen and (max-width: 1097px) {
   .span-whoEarns {
     line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .body-main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .div-checkboxComp {
+    margin-bottom: 10px;
   }
 }
 
@@ -467,20 +513,20 @@ form {
     font-size: 14px;
   }
 
-  .differenceSalaryUp{
-    left: 25%;
+  .differenceSalaryUp {
+    left: 23%;
   }
 
-  .differenceSalaryDown{
-    left: 20%;
+  .differenceSalaryDown {
+    left: 18%;
   }
 
   .triangleUp {
     border-width: 0px 5px 10px 5px;
-    top: 20%;
+    top: 21%;
     left: 85%;
   }
-  
+
   .triangleDown {
     border-width: 10px 5px 10px 5px;
     top: 21%;
@@ -501,17 +547,23 @@ form {
   }
 }
 
-@media only screen and (max-width: 416px) {
-  .div-date {
-    top: 75%;
+@media only screen and (max-width: 500px) {
+  .div-checkboxComp {
+    width: 90%;
   }
 }
 
 @media only screen and (max-width: 440px) {
   .text,
   .span-whoEarns {
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 35px;
+    line-height: 62px;
+  }
+}
+
+@media only screen and (max-width: 416px) {
+  .div-date {
+    top: 75%;
   }
 }
 
@@ -523,7 +575,7 @@ form {
   }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 350px) {
   .main {
     display: grid;
     min-height: 100vh;
@@ -537,9 +589,8 @@ form {
 }
 
 @media only screen and (max-width: 260px) {
-
   .employeeName {
     top: 16%;
     font-size: 25px;
-  } 
+  }
 }
